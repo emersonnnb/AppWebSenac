@@ -35,7 +35,7 @@ $saldo_pedido = $row_pedido['TOTAL'];
         </div>
         <div class="row mb-3 d-flex justify-content-between">
             <div class="col-lg-4 col-sm-6 ">
-                <a href="../admin/usuario_list.php" style="text-decoration:none">
+                <a href="./usuario_list.php" style="text-decoration:none">
                     <div class="card text-white" style="background-color:#B22222">
                         <div class="card-body">
                             <i class="fas fa-users fa-3x"></i>
@@ -47,7 +47,7 @@ $saldo_pedido = $row_pedido['TOTAL'];
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <a href="..//admin/cliente_list.php" style="text-decoration:none">
+                <a href="./cliente_list.php" style="text-decoration:none">
                     <div class="card text-white" style="background-color:#4F4F4F">
                         <div class="card-body">
                             <i class="fas fa-shopping-bag fa-3x"></i>
@@ -58,7 +58,7 @@ $saldo_pedido = $row_pedido['TOTAL'];
             </div>
 
             <div class="col-lg-4 col-sm-6">
-                <a href="../admin/produto_list.php" style="text-decoration:none">
+                <a href="./produto_list.php" style="text-decoration:none">
                     <div class="card text-white" style="background-color:#A52A2A">
                         <div class="card-body">
                             <i class="fas fa-list-ul fa-3x"></i>

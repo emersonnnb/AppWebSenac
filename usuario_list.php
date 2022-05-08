@@ -9,7 +9,7 @@ require('includes/header.php');
         <div class="d-flex">
             <div class="mr-auto p-2">
                 <h2 class="display-4 titulo">Listar Usuário
-                <a href="../admin/home.php" class="btn btn-info btn-lg bg-dark">Voltar</a>
+                    <a href="./home.php" class="btn btn-info btn-lg bg-dark">Voltar</a>
                 </h2>
                 <hr>
             </div>
@@ -37,28 +37,34 @@ require('includes/header.php');
                         $telefone = $array['telefone'];
                         $email = $array['email'];
                     ?>
-                        <tr>
-                            <td><?= $nome ?></td>
-                            <td class="d-none d-lg-table-cell"><?= $telefone ?></td>
-                            <td><?= $email ?></td>
-                            <td class="text-center">
-                                <span class="d-none d-md-block">
-                                    <a href="usuario_visualizar.php?id=<?= $id_usuario ?>" class="btn btn-outline-primary btn-sm">Visualizar</a>
-                                    <a href="usuario_editar.php?id=<?= $id_usuario ?>" class="btn btn-outline-warning btn-sm">Editar</a>
-                                    <a href="usuario_apagar.php?id=<?= $id_usuario ?>" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target=" #apagarRegistro">Apagar</a>
-                                </span>
-                                <div class="dropdown d-block d-md-none">
-                                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Ações
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
-                                        <a class="dropdown-item" href="usuario_visualizar.php?id=<?= $id_usuario ?>" data-toggle="modal" data-target="#visualizarRegistro">Visualizar</a>
-                                        <a class="dropdown-item" href="usuario_editar.php?id=<?= $id_usuario ?>">Editar</a>
-                                        <a class="dropdown-item" href="usuario_apagar.php?id=<?= $id_usuario ?>" data-toggle="modal" data-target="#apagarRegistro">Apagar</a>
-                                    </div>
+                    <tr>
+                        <td><?= $nome ?></td>
+                        <td class="d-none d-lg-table-cell"><?= $telefone ?></td>
+                        <td><?= $email ?></td>
+                        <td class="text-center">
+                            <span class="d-none d-md-block">
+                                <a href="usuario_visualizar.php?id=<?= $id_usuario ?>"
+                                    class="btn btn-outline-primary btn-sm">Visualizar</a>
+                                <a href="usuario_editar.php?id=<?= $id_usuario ?>"
+                                    class="btn btn-outline-warning btn-sm">Editar</a>
+                                <a href="usuario_apagar.php?id=<?= $id_usuario ?>" class="btn btn-outline-danger btn-sm"
+                                    data-toggle="modal" data-target=" #apagarRegistro">Apagar</a>
+                            </span>
+                            <div class="dropdown d-block d-md-none">
+                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ações
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                    <a class="dropdown-item" href="usuario_visualizar.php?id=<?= $id_usuario ?>"
+                                        data-toggle="modal" data-target="#visualizarRegistro">Visualizar</a>
+                                    <a class="dropdown-item" href="usuario_editar.php?id=<?= $id_usuario ?>">Editar</a>
+                                    <a class="dropdown-item" href="usuario_apagar.php?id=<?= $id_usuario ?>"
+                                        data-toggle="modal" data-target="#apagarRegistro">Apagar</a>
                                 </div>
-                            </td>
-                        </tr>
+                            </div>
+                        </td>
+                    </tr>
                     <?php
                     }
                     ?>
@@ -68,9 +74,9 @@ require('includes/header.php');
             <?php
             if (isset($_SESSION['atualizacao_sucesso'])) :
             ?>
-                <div class="alert alert-success col-lg-2">
-                    <p>Atualizado com sucesso!!</p>
-                </div>
+            <div class="alert alert-success col-lg-2">
+                <p>Atualizado com sucesso!!</p>
+            </div>
             <?php
             endif;
             unset($_SESSION['atualizacao_sucesso']);
@@ -79,9 +85,9 @@ require('includes/header.php');
             <?php
             if (isset($_SESSION['erro_atualizacao'])) :
             ?>
-                <div class="alert alert-danger col-lg-2">
-                    <p>Erro ao atualizar!!</p>
-                </div>
+            <div class="alert alert-danger col-lg-2">
+                <p>Erro ao atualizar!!</p>
+            </div>
             <?php
             endif;
             unset($_SESSION['erro_atualizacao']);
@@ -90,9 +96,9 @@ require('includes/header.php');
             <?php
             if (isset($_SESSION['apagado_sucesso'])) :
             ?>
-                <div class="alert alert-success col-lg-2">
-                    <p>Apagado com sucesso!!</p>
-                </div>
+            <div class="alert alert-success col-lg-2">
+                <p>Apagado com sucesso!!</p>
+            </div>
             <?php
             endif;
             unset($_SESSION['apagado_sucesso']);
@@ -101,7 +107,8 @@ require('includes/header.php');
     </div>
 </div>
 <!-- Modal para confirmar a exclusÃÂ£o de um registro-->
-<div class="modal fade" id="apagarRegistro" tabindex="-1" role="dialog" aria-labelledby="apagarRegistro" aria-hidden="true">
+<div class="modal fade" id="apagarRegistro" tabindex="-1" role="dialog" aria-labelledby="apagarRegistro"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-danger text-white">
