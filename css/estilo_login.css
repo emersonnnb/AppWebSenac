@@ -1,0 +1,17 @@
+.btn-editar{
+    color: #fff !important;
+}
+.tamanho-largura {
+    max-width: 500px;
+    height: auto;
+    left: 50%;
+    margin: -200px 0 0 -210px;
+    padding: 40px;
+    position: absolute;
+    top: 35%;
+    border: 2px solid #f3f3f3;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
+    -moz-box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
+    box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
+}
