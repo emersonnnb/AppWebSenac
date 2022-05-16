@@ -28,11 +28,14 @@ $menu = (isset($page)) ? $page : 'index';
                 <li class="border-bottom border-light pb-2 pt-2"><a href="#submenu1" data-toggle="collapse"><i
                             class="fas fa-user"></i>
                         Usuário </a>
-                    <ul id="submenu1" class="list-unstyled collapse ">
+                    <ul id="submenu1"
+                        <?php echo ($menu == 'novo_usuario' || $menu == 'listar_usuario' || $menu == 'buscar_usuario') ? 'class="list-unstyled collapse show"' : 'class="list-unstyled collapse"'; ?>>
+
                         <li <?php echo ($menu == 'novo_usuario') ? 'class="active"' : null; ?>><a
                                 href="usuario_cadastro.php"><i class="fas fa-user-plus"></i> Novo </a></li>
                         <li <?php echo ($menu == 'listar_usuario') ? 'class="active"' : null; ?>><a
-                                href="usuario_list.php"><i class="fas fa-users"></i> Listar </a></li>
+                                href="usuario_list.php"><i class="fas fa-users" data-target="#submenu1"></i> Listar </a>
+                        </li>
                         <li <?php echo ($menu == 'buscar_usuario') ? 'class="active"' : null; ?>><a
                                 href="usuario_buscar.php"><i class="fas fa-search"></i> Buscar </a></li>
                     </ul>
@@ -40,7 +43,8 @@ $menu = (isset($page)) ? $page : 'index';
                 <li class="border-bottom border-light pb-2 pt-2"><a href="#submenu2" data-toggle="collapse"><i
                             class="fas fa-user"></i>
                         Cliente </a>
-                    <ul id="submenu2" class="list-unstyled collapse">
+                    <ul id="submenu2"
+                        <?php echo ($menu == 'novo_cliente' || $menu == 'listar_cliente') ? 'class="list-unstyled collapse show"' : 'class="list-unstyled collapse"'; ?>>
                         <li <?php echo ($menu == 'novo_cliente') ? 'class="active"' : null; ?>><a
                                 href="cliente_cadastro.php"><i class="fas fa-user-plus"></i> Novo </a></li>
                         <li <?php echo ($menu == 'listar_cliente') ? 'class="active"' : null; ?>><a
