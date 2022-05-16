@@ -1,17 +1,99 @@
-.btn-editar{
-    color: #fff !important;
+div.main-login {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+   
 }
-.tamanho-largura {
-    max-width: 500px;
-    height: auto;
-    left: 50%;
-    margin: -200px 0 0 -210px;
-    padding: 40px;
-    position: absolute;
-    top: 35%;
-    border: 2px solid #f3f3f3;
-    border-radius: 15px;
-    -webkit-box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
-    -moz-box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
-    box-shadow: 10px 10px 47px -3px rgba(161, 161, 161, 1);
+
+div.tamanho-largura {
+    max-width: 425px;
+    height: 525px;
+    box-sizing: border-box;
+    background: linear-gradient(204.28deg, #222C3C 14.43%, #4E5A6D 100%);
+    border: 5px solid #A1A7AF;
+    box-shadow: 11px 11px 18px 2px rgba(65, 76, 95, 0.5);
+    border-radius: 100px 0px;
+}
+
+h2.text-titulo-login {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #C7CACE;
+    margin-top: 1em;
+}
+
+form.log-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.form-group {
+    width: 85%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+label.log-user, label.log-pass {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C7CACE;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom:1px ;
+
+}
+input.log-user, input.log-pass {
+    background: #C7CACE;
+    border: 1px solid #474747;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+input:focus.log-user, input.log-pass:focus{
+    background: transparent;
+    color: #dfdfdf;
+    font-weight: 200;
+    box-shadow: 0 0 0 0 #A1A7AF;
+    border-color: #C7CACE;
+}
+.log-form input:focus::placeholder{
+    color: #ababab;
+    font-weight: 100;
+}
+
+button.log-btn-entrar {
+    background: #1F2A3B;
+    border: 2px solid #C7CACE;
+    border-radius: 5px;
+    width: 122px;
+    height: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size:1em;
+    line-height: 23px;
+    color: #C7CACE;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-editar {
+    color: #fff !important;
 }
