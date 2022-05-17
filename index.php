@@ -18,7 +18,7 @@
         <div class="container tamanho-largura">
             <h2 class="text-center text-titulo-login">ACESSO RESTRITO</h2>
             <div class="d-flex justify-content-center">
-                <img src="img/imgTelaLogin.png" width="270px" height="178px" alt="">
+                <img src="img/imgTelaLogin.png" width="300px" height="208px" alt="">
             </div>
             <form action="logar.php" method="POST" class="log-form">
                 <div class="form-group">
