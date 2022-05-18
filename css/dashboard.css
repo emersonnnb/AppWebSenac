@@ -32,7 +32,8 @@ body {
 
 .sidebar ul li a:hover,
 .sidebar ul .active a {  
-    background-color: #354358;    
+    background-color: #fff;    
+    color: #000;
 }
 
 .sidebar ul ul a {

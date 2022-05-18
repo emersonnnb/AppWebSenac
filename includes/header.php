@@ -9,8 +9,7 @@ $menu = (isset($page)) ? $page : 'index';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>HomeShop-Restrito</title>
-    <link rel="icon" href="img/logo.jpeg">
+    <title>GAP</title>
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -23,9 +22,9 @@ $menu = (isset($page)) ? $page : 'index';
     <div class="d-flex">
         <nav class="sidebar">
             <ul class="list-unstyled">
-                <li class="border-bottom pb-2"><a href="home.php"><i class="fas fa-home"></i> HOME</a></li>
+                <li class="border-bottom"><a href="home.php"><i class="fas fa-home"></i> HOME</a></li>
 
-                <li class="border-bottom pb-2 pt-2"><a href="#submenu1" data-toggle="collapse"
+                <li class="border-bottom "><a href="#submenu1" data-toggle="collapse"
                         <?php echo ($menu == 'novo_usuario' || $menu == 'listar_usuario' || $menu == 'buscar_usuario') ? 'aria-expanded="true"' : 'null'; ?>>
                         <i class="fas fa-user"></i>
                         Usuário </a>
@@ -41,7 +40,7 @@ $menu = (isset($page)) ? $page : 'index';
                                 href="usuario_buscar.php"><i class="fas fa-search"></i> Buscar </a></li>
                     </ul>
                 </li>
-                <li class="border-bottom pb-2 pt-2"><a href="#submenu2" data-toggle="collapse"
+                <li class="border-bottom"><a href="#submenu2" data-toggle="collapse"
                         <?php echo ($menu == 'novo_cliente' || $menu == 'listar_cliente') ? 'aria-expanded="true"' : 'null'; ?>>
                         <i class="fas fa-user"></i>
                         Cliente </a>
@@ -64,7 +63,7 @@ $menu = (isset($page)) ? $page : 'index';
                                 href="produto_list.php"><i class="fas fa-tags"></i> Listar</a></li>
                     </ul>
                 </li>
-                <li class="border-bottom pb-2 pt-2"><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                <li class="border-bottom"><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
                 </li>
             </ul>
         </nav>
