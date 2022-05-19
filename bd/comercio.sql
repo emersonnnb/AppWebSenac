@@ -36,16 +36,18 @@ CREATE TABLE `acesso_restrito` (
   `nome` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `telefone` varchar(255) NOT NULL,
+  `celular` varchar(255) NOT NULL,
   `login` varchar(255) NOT NULL,
-  `senha` varchar(255) NOT NULL
+  `senha` varchar(255) NOT NULL,
+  `tipo` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `acesso_restrito`
 --
 
-INSERT INTO `acesso_restrito` (`id_restrito`, `nome`, `email`, `telefone`, `login`, `senha`) VALUES
-(1, 'Administrador', 'admin@admin.com', '(21)0000-0000', 'admin', '40bd001563085fc35165329ea1ff5c5ecbdbbeef');
+INSERT INTO `acesso_restrito` (`id_restrito`, `nome`, `email`, `telefone`, `celular`, `login`, `senha`, `tipo`) VALUES
+(1, 'Administrador', 'admin@admin.com', '(21)0000-0000','999999999', 'admin', '40bd001563085fc35165329ea1ff5c5ecbdbbeef','1');
 
 -- --------------------------------------------------------
 
