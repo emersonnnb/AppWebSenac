@@ -17,10 +17,17 @@ body {
 .sidebar {
     background-color: #222c3c;
     min-width: 250px;
-    max-width: 250px;
-    
+    max-width: 250px;    
     min-height: calc(100vh - 0px);    
     transition: all 0.3s;
+}
+
+.sidebar ul li{
+    min-height: calc(7vh - 0px);
+}
+
+.sidebar ul li ul .active, .sidebar ul li ul li{
+    background-color: #4E5A6D;
 }
 
 .sidebar ul li a {
@@ -34,11 +41,12 @@ body {
 .sidebar ul .active a {  
     background-color: #fff;    
     color: #000;
+    min-height: calc(7vh - 1px);
 }
 
 .sidebar ul ul a {
     padding-left: 2.5rem;
-    background-color: #1e2835;
+    background-color: #4E5A6D;
 }
 
 
@@ -70,7 +78,7 @@ body {
 }
 
 .sidebar [aria-expanded="true"] {
-    background-color: #19222d;
+    background-color: #4E5A6D;
    
 }
 
