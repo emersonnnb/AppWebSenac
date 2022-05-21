@@ -35,7 +35,7 @@ $menu = (isset($page)) ? $page : 'index';
                             <?php echo ($menu == 'novo_usuario') ? 'class="active"' : null; ?>><a
                                 href="usuario_cadastro.php"><i class="fas fa-user-plus"></i> Novo </a></li>
                         <li class=" border-bottom" <?php echo ($menu == 'listar_usuario') ? 'class="active"' : null; ?>>
-                            <a href="usuario_list.php"><i class="fas fa-users" data-target="#submenu1"></i> Listar </a>
+                            <a href="usuario_listas.php"><i class="fas fa-users" data-target="#submenu1"></i> Listar </a>
                         </li>
                         <li <?php echo ($menu == 'buscar_usuario') ? 'class="active"' : null; ?>>
                             <a href="usuario_buscar.php"><i class="fas fa-search"></i> Buscar </a>
