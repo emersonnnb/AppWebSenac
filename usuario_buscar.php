@@ -19,7 +19,7 @@ require('includes/header.php');
             </div>
         </div>
         <br>
-        <div id="dados"> Aqui sera p resultado!!</div>
+        <div id="dados"> </div>  
         <script>
             function buscar(palavra) {
                 //O método $.ajax(); é o responsável pela requisição
