@@ -13,14 +13,16 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 ### 🎲 Rodando o Back End (servidor)
 
 ```bash
-# Clone este repositório
+# Clone este repositório dentro do diretório C:\xampp\htdocs
 $ git clone <https://github.com/emersonnnb/AppWebSenac>
 
 # Iniciar o servidor WEB e Banco de Dados
 Inicie os serviços (APACHE e MySQL) da aplicação XAMP e aguarde o serviço ficar ativo.
 
 # Importando o banco de dados
+Acesse o PHPMYADMIN  < http://localhost/phpmyadmin/> 
+  -Import o arquivo "comercio.sql" que esta localizado no diretorio - C:\xampp\htdocs\appWebSenac\bd
 
-
-# Abra o navegador WEB - acesse <http://localhost/appWebSenac/index.php>
+# Acessar a aplicação
+Acesse <http://localhost/appWebSenac/index.php>
 ```
