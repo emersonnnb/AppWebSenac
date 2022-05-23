@@ -14,19 +14,13 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/emersonnnb/AppWebSenac>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+# Iniciar o servidor WEB e Banco de Dados
+Inicie os serviços (APACHE e MySQL) da aplicação XAMP e aguarde o status do serviço ficar como ativo.
 
-# Vá para a pasta server
-$ cd server
+# Importando o banco de dados
 
-# Instale as dependências
-$ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+# Abra o navegador WEB - acesse <http://localhost/appWebSenac/index.php>
 ```
