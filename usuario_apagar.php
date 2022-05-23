@@ -12,7 +12,7 @@ if(isset($_POST['btn-deletar'])):
 
 	if(mysqli_query($conexao, $sql)):
 		$_SESSION['apagado_sucesso'] = true;
-		header('Location: usuario_list.php');
+		header('Location: usuario_listas.php');
 	else:
 		$_SESSION['erro'] = "Erro ao atualizar";
 		header('Location: usuario_editar.php');

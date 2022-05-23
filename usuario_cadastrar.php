@@ -30,3 +30,4 @@ if ($conexao->query($sql) === TRUE) {
 $conexao->close();
 header('Location: usuario_cadastro.php');
 exit;
+?>
