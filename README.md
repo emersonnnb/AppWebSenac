@@ -33,47 +33,27 @@ Acesse <http://localhost/appWebSenac/index.php>
 <h4 align="center">
   <img alt="tela login" title="#Tela_Login" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/tela-login.png" />
 </h4>
-<HR>
+<HR>✅
   <h6 align="center">DASHBOARD - PERMITE VISUALIZAR RESUMO DE TODOS OS CADASTROS</h6>
 <h4 align="center">
   <img alt="tela Dashboard" title="#Tela_Dashboard" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/dashboard.png" />
 </h4>
-<<<<<<< HEAD
-  <HR>
-=======
   
->>>>>>> ed92084269c984fcb25c536c28fb1325bf18c3e6
   <h6 align="center">Tela para cadastro de novos Usuarios</h6>
 <h4 align="center">
   <img alt="tela cadastro usuario" title="#Tela_cadastro_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-user.png" />
 </h4>
-<<<<<<< HEAD
-      <HR>
-=======
       
->>>>>>> ed92084269c984fcb25c536c28fb1325bf18c3e6
   <h6 align="center">Tela para Listar usuarios cadastrados</h6>
 <h4 align="center">
   <img alt="tela listar usuario" title="#Tela_listar_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/listar-user.png" />
 </h4>
-<<<<<<< HEAD
-              <HR>
-=======
              
->>>>>>> ed92084269c984fcb25c536c28fb1325bf18c3e6
   <h6 align="center">Tela para buscar usuario especifico</h6>
 <h4 align="center">
   <img alt="tela buscar usuario" title="#Tela_buscar_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/buscar-ser.png" />
 </h4>
-<<<<<<< HEAD
-
-                <hr>
-  <h6 align="center">Tela para cadastrar cliente</h6>
-<h4 align="center">
-  <img alt="tela cadastrar cliente" title="#Tela_cadastrar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-cliente.png" />
-</h4>
-=======
-<hr>                
+<hr>✅                
 <h6 align="center">Tela para cadastrar cliente</h6>
 <h4 align="center">
   <img alt="tela cadastrar cliente" title="#Tela_cadastrar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-cliente.png" />
@@ -81,7 +61,16 @@ Acesse <http://localhost/appWebSenac/index.php>
   
   <h6 align="center">Tela para listar cliente</h6>
 <h4 align="center">
-  <img alt="tela listar cliente" title="#Tela_listar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-cliente.png" />
+  <img alt="tela listar cliente" title="#Tela_listar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/listar-cliente.png" />
 </h4>
 
->>>>>>> ed92084269c984fcb25c536c28fb1325bf18c3e6
+  <hr>✅               
+<h6 align="center">Tela para cadastrar produto</h6>
+<h4 align="center">
+  <img alt="tela cadastrar produto" title="#Tela_cadastrar_produto" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-produto.png" />
+</h4>
+  
+  <h6 align="center">Tela para listar produto</h6>
+<h4 align="center">
+  <img alt="tela listar produto" title="#Tela_listar_produto" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/listar-produto.png" />
+</h4>
