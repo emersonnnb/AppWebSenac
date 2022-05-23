@@ -28,8 +28,13 @@ Acesse <http://localhost/appWebSenac/index.php>
 ```
 
 ### ✔ Demonstração da aplicação
-Para teste, utilizar: **Usuário:** Admin // **Senha:** 123<br>
+🔐 Para teste, utilizar: **Usuário:** Admin // **Senha:** 123<br>
 <h6 align="center">TELA DE LOGIN - PERMITE ACESSO A AREA RESTRITA</h6>
 <h4 align="center">
   <img alt="tela login" title="#Tela_Login" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/tela-login.png" />
+</h4>
+<HR>
+  <h6 align="center">DASHBOARD - PERMITE VISUALIZAR RESUMO DE TODOS OS CADASTROS</h6>
+<h4 align="center">
+  <img alt="tela login" title="#Tela_Login" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/dashboard.png" />
 </h4>
