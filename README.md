@@ -17,7 +17,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 $ git clone <https://github.com/emersonnnb/AppWebSenac>
 
 # Iniciar o servidor WEB e Banco de Dados
-Inicie os serviços (APACHE e MySQL) da aplicação XAMP e aguarde o status do serviço ficar como ativo.
+Inicie os serviços (APACHE e MySQL) da aplicação XAMP e aguarde o serviço ficar ativo.
 
 # Importando o banco de dados
 
