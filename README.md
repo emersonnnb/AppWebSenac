@@ -38,24 +38,29 @@ Acesse <http://localhost/appWebSenac/index.php>
 <h4 align="center">
   <img alt="tela Dashboard" title="#Tela_Dashboard" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/dashboard.png" />
 </h4>
-  <HR>
+  
   <h6 align="center">Tela para cadastro de novos Usuarios</h6>
 <h4 align="center">
   <img alt="tela cadastro usuario" title="#Tela_cadastro_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-user.png" />
 </h4>
-      <HR>
+      
   <h6 align="center">Tela para Listar usuarios cadastrados</h6>
 <h4 align="center">
   <img alt="tela listar usuario" title="#Tela_listar_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/listar-user.png" />
 </h4>
-              <HR>
+             
   <h6 align="center">Tela para buscar usuario especifico</h6>
 <h4 align="center">
   <img alt="tela buscar usuario" title="#Tela_buscar_usuario" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/buscar-ser.png" />
 </h4>
-
-                <hr>
-  <h6 align="center">Tela para cadastrar cliente</h6>
+<hr>                
+<h6 align="center">Tela para cadastrar cliente</h6>
 <h4 align="center">
   <img alt="tela cadastrar cliente" title="#Tela_cadastrar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-cliente.png" />
 </h4>
+  
+  <h6 align="center">Tela para listar cliente</h6>
+<h4 align="center">
+  <img alt="tela listar cliente" title="#Tela_listar_cliente" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/cadastro-cliente.png" />
+</h4>
+
