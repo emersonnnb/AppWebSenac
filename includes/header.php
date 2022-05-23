@@ -56,7 +56,7 @@ $menu = (isset($page)) ? $page : 'index';
                                 href="cliente_list.php"><i class="fas fa-users"></i> Listar </a></li>
                     </ul>
                 </li>
-                <li class="border-bottom"><a href="#submenu3" data-toggle="collapse"
+                <li class="border-bottom border-top"><a href="#submenu3" data-toggle="collapse"
                         <?php echo ($menu == 'novo_produto' || $menu == 'listar_produto') ? 'aria-expanded="true"' : 'null'; ?>><i
                             class="fas fa-list-ul"></i> Produto</a>
                     <ul id="submenu3"
