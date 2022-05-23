@@ -4,73 +4,73 @@ $page = 'novo_usuario';
 require('includes/header.php');
 ?>
 <script type="text/javascript">
-$(document).ready(function() {
+    $(document).ready(function() {
 
-    $("#cpf").mask("000.000.000-00")
-    $("#rg").mask("00.000.000-0")
-    $("#celular").mask("(00)00000-0000")
+        $("#cpf").mask("000.000.000-00")
+        $("#rg").mask("00.000.000-0")
+        $("#celular").mask("(00)00000-0000")
 
-    function limpa_formulário_cep() {
-        // Limpa valores do formulário de cep.
-        $("#rua").val("");
-        $("#bairro").val("");
-        $("#cidade").val("");
-        $("#uf").val("");
-        $("#ibge").val("");
-    }
+        function limpa_formulário_cep() {
+            // Limpa valores do formulário de cep.
+            $("#rua").val("");
+            $("#bairro").val("");
+            $("#cidade").val("");
+            $("#uf").val("");
+            $("#ibge").val("");
+        }
 
-    //Quando o campo cep perde o foco.
-    $("#cep").blur(function() {
+        //Quando o campo cep perde o foco.
+        $("#cep").blur(function() {
 
-        //Nova variável "cep" somente com dígitos.
-        var cep = $(this).val().replace(/\D/g, '');
+            //Nova variável "cep" somente com dígitos.
+            var cep = $(this).val().replace(/\D/g, '');
 
-        //Verifica se campo cep possui valor informado.
-        if (cep != "") {
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
 
-            //Expressão regular para validar o CEP.
-            var validacep = /^[0-9]{8}$/;
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
 
-            //Valida o formato do CEP.
-            if (validacep.test(cep)) {
+                //Valida o formato do CEP.
+                if (validacep.test(cep)) {
 
-                //Preenche os campos com "..." enquanto consulta webservice.
-                $("#rua").val("...");
-                $("#bairro").val("...");
-                $("#cidade").val("...");
-                $("#uf").val("...");
-                $("#ibge").val("...");
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    $("#rua").val("...");
+                    $("#bairro").val("...");
+                    $("#cidade").val("...");
+                    $("#uf").val("...");
+                    $("#ibge").val("...");
 
-                //Consulta o webservice viacep.com.br/
-                $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
+                    //Consulta o webservice viacep.com.br/
+                    $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
 
-                    if (!("erro" in dados)) {
-                        //Atualiza os campos com os valores da consulta.
-                        $("#rua").val(dados.logradouro);
-                        $("#bairro").val(dados.bairro);
-                        $("#cidade").val(dados.localidade);
-                        $("#uf").val(dados.uf);
-                        $("#ibge").val(dados.ibge);
-                    } //end if.
-                    else {
-                        //CEP pesquisado não foi encontrado.
-                        limpa_formulário_cep();
-                        alert("CEP não encontrado.");
-                    }
-                });
+                        if (!("erro" in dados)) {
+                            //Atualiza os campos com os valores da consulta.
+                            $("#rua").val(dados.logradouro);
+                            $("#bairro").val(dados.bairro);
+                            $("#cidade").val(dados.localidade);
+                            $("#uf").val(dados.uf);
+                            $("#ibge").val(dados.ibge);
+                        } //end if.
+                        else {
+                            //CEP pesquisado não foi encontrado.
+                            limpa_formulário_cep();
+                            alert("CEP não encontrado.");
+                        }
+                    });
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
             } //end if.
             else {
-                //cep é inválido.
+                //cep sem valor, limpa formulário.
                 limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
             }
-        } //end if.
-        else {
-            //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
-        }
+        });
     });
-});
 </script>
 
 <!-- Formulario de cadastro  -->
@@ -78,34 +78,45 @@ $(document).ready(function() {
     <div class="list-group-item">
         <div class="d-flex">
             <div class="mr-auto p-2">
-                <h2 class="display-4 titulo">Cadastrar</h2>
+                <h1 class="display-4 titulo"><b>Cadastrar Usuário</b></h1>
                 <hr>
             </div>
         </div>
+            <div class="bg-white text-center">
+              <h3 class="display-4 titulo"><h5>Dados Pessoais</h5></h3>
+              <hr>
+              </div>  
+              <style type="text/css">
+                  hr{
+                    background-color:#ddd;
+                    height: 5px;
+                  
+                  }
+                </style>
+
         <form name="usuario" method="POST" action="usuario_cadastrar.php">
             <div class="row">
                 <div class="form-group col-md-4">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" required>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Insira seu nome" name="nome" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" required>
+                    <input type="email" class="form-control" id="email" style="width:340px; height:40px;" placeholder="email@example.com" name="email" required>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-1">
                     <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" placeholder="Telefone " name="telefone"
-                        required>
+                    <input type="text" class="form-control" id="telefone" style="width:145px; height:40px;" placeholder="(XX) XXXX-XXXX " name="telefone" required>
                 </div>
 
             </div>
             <div class="row">
                 <div class="form-group col-md-2">
                     <label for="celular">Celular</label>
-                    <input type="text" class="form-control" id="celular" placeholder="Celular" name="celular" required>
+                    <input type="text" class="form-control" id="celular" placeholder="(XX) XXXX-XXXX" name="celular" required>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="nome">Login de acesso</label>
+                    <label for="nome">Login</label>
                     <input type="text" class="form-control" id="login" placeholder="login" name="login" required>
                 </div>
                 <div class="form-group col-md-2">
@@ -113,20 +124,34 @@ $(document).ready(function() {
                     <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="nivel">Tipo de Acesso</label>
-                    <select id="nivel" class="form-control" name="tipo">
+                    <label for="nivel">Tipo</label>
+                    <select name="nivel" class="form-control" id="senha" placeholder="*Selecione*" name="senha"required>
+                        <option value=""selected="selected">*Selecione*</option>
+                        <option value="1">Usuário</option>
                         <option value="2">Administrador</option>
-                        <option value="1" selected>Usuário</option>
-                    </select>
+                  </select>
                 </div>
             </div>
-            <div class="row">
-                <div class="form-group col-6 col-md-2">
-                    <b><label for="cep">Buscador de Endereço</label></b>
-                    <input type="text" class="form-control" id="cep" name="cep" value=""
-                        placeholder="Insira o CEP aqui!!">
-                </div>
+            
+
+            <div class="bg-white text-center">
+              <h4 class="display-4 titulo"><h5>Endereço</h5></h4>
             </div>
+              <hr>
+              <style type="text/css">
+                h4 {
+                    height:90px;
+                    width:150px;
+                }
+              </style>
+
+              <div class="row">
+              <div class="form-group col-3 col-md-3">
+                 <label for="cep">CEP</label>
+                 <input type="text" class="form-control" id="cep" name="cep" value="" placeholder="Insira o CEP">
+             </div>
+            </div>
+
             <div class="row">
                 <div class="form-group col-lg-3 col-12">
                     <label for="endereco">Rua</label>
@@ -134,13 +159,11 @@ $(document).ready(function() {
                 </div>
                 <div class="form-group col-lg-1">
                     <label for="numero">Numero</label>
-                    <input type="text" class="form-control" id="numero" name="numero" placeholder="Numero da casa"
-                        required>
+                    <input type="text" class="form-control" id="numero" name="numero" placeholder="Numero" required>
                 </div>
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-3">
                     <label for="complemento">Complemento</label>
-                    <input type="text" class="form-control" id="complemento" name="complemento"
-                        placeholder="casa/apartamento/bloco" required>
+                    <input type="text" class="form-control" style="width:225px;height:40px;" id="complemento" name="complemento" placeholder="casa/apartamento/bloco" required>
                 </div>
             </div>
             <div class="row">
@@ -172,9 +195,9 @@ $(document).ready(function() {
         <?php
         if (isset($_SESSION['usuario_existe'])) :
         ?>
-        <div class="alert alert-danger">
-            <p>O usuário já existe.
-        </div>
+            <div class="alert alert-danger">
+                <p>O usuário já existe.
+            </div>
         <?php
         endif;
         unset($_SESSION['usuario_existe']);
@@ -182,9 +205,9 @@ $(document).ready(function() {
         <?php
         if (isset($_SESSION['status_cadastro'])) :
         ?>
-        <div class="alert alert-success">
-            <p>Cadastro com sucesso!!</p>
-        </div>
+            <div class="alert alert-success">
+                <p>Cadastro com sucesso!!</p>
+            </div>
         <?php
         endif;
         unset($_SESSION['status_cadastro']);
