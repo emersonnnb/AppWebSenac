@@ -104,7 +104,7 @@ require('includes/header.php');
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" id="email" style="width:340px; height:40px;" placeholder="email@example.com" name="email" required>
                 </div>
-                <div class="form-group col-md-1">
+                <div class="form-group col-md-2">
                     <label for="telefone">Telefone</label>
                     <input type="text" class="form-control" id="telefone" style="width:145px; height:40px;" placeholder="(XX) XXXX-XXXX " name="telefone" required>
                 </div>
@@ -124,6 +124,9 @@ require('includes/header.php');
                     <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required>
                 </div>
                 <div class="form-group col-md-2">
+                    
+                </div>
+                <div class="form-group col-md-2">
                     <label for="nivel">Tipo</label>
                     <select name="nivel" class="form-control" id="senha" placeholder="*Selecione*" name="senha"required>
                         <option value=""selected="selected">*Selecione*</option>
@@ -135,7 +138,7 @@ require('includes/header.php');
             
 
             <div class="bg-white text-center">
-              <h4 class="display-4 titulo"><h5>Endereço</h5></h4>
+              <br><h5>Endereço</h5></h4>
             </div>
               <hr>
               <style type="text/css">
