@@ -4,7 +4,7 @@
 #### Descrição do Projeto
 <p align="center">Projeto desenvolvido por alunos do grupo 09 do curso de análise e desenvolvimento de sistemas do CENTRO UNIVERSITÁRIO SENAC 1°semestre 2022, projeto tem como objetivo atender a necessidade de controle de fluxo de clientes, produtos e usuários em estabelecimentos comercias de pequeno porte.</p>
 
-### Pré-requisitos
+### ✔ Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [**XAMP**](https://www.apachefriends.org/pt_br/download.html), sendo necessario selecionar no ato da instalação as aplicações: **APACHE** e **MySQL**. 
@@ -26,3 +26,10 @@ Acesse o PHPMYADMIN  < http://localhost/phpmyadmin/>
 # Acessar a aplicação
 Acesse <http://localhost/appWebSenac/index.php>
 ```
+
+### ✔ Demonstração da aplicação
+Para teste, utilizar: **Usuário:** Admin // **Senha:** 123<br>
+<h6 align="center">TELA DE LOGIN - PERMITE ACESSO A AREA RESTRITA</h6>
+<h4 align="center">
+  <img alt="tela login" title="#Tela_Login" src="https://github.com/emersonnnb/AppWebSenac/blob/Master/img/readme/tela-login.png" />
+</h4>
