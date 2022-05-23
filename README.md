@@ -7,7 +7,7 @@
 ### ✔ Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[**XAMP**](https://www.apachefriends.org/pt_br/download.html), sendo necessario selecionar no ato da instalação as aplicações: **APACHE** e **MySQL**. 
+[**XAMPP**](https://www.apachefriends.org/pt_br/download.html), sendo necessario selecionar no ato da instalação as aplicações: **APACHE** e **MySQL**. 
 
 
 ### 🎲 Rodando o Back End (servidor)
