@@ -149,12 +149,7 @@ require('includes/header.php');
                     <label for="uf">Estado/UF</label>
                     <input type="text" class="form-control" id="uf" name="uf" readonly>
                 </div>
-                <!--
-                    <div class="form-group col-lg-3">
-                        <label for="imagem">Imagem:</label>
-                        <input type="file" class="form-control" id="imagem" placeholder="Imagem" name="imagem" required>
-                    </div>
-                -->
+            
             </div>
 
             <div class="col-sm-offset-2 col-sm-10">

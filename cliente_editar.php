@@ -90,6 +90,7 @@ $(document).ready(function() {
         </div>
         <h5><u>Dados Pessoais</u></h5><br>
         <form action="cliente_update.php" method="POST" enctype="multipart/form-data"  name="cadastro">
+            <input type="text" name="id" value="<?=$dados['id_cliente'];?>" hidden>
             <div class="row">
                 <div class="form-group col-12 col-md-3">
                     <label for="nome">Nome Completo</label>
@@ -157,10 +158,7 @@ $(document).ready(function() {
                     <label for="uf">Estado/UF</label>
                     <input type="text" class="form-control" id="uf" name="uf" readonly value="<?php echo $dados['estado'];?>">
                 </div>
-                <div class="form-group col-lg-3">
-                    <label for="imagem">Imagem:</label>
-                    <input type="file" class="form-control" id="imagem" placeholder="Imagem" name="imagem"  value="<?php echo $dados['imagem'];?>">
-                </div>
+                
             </div>
 
             <div class="col-sm-offset-2 col-sm-10">

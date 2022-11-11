@@ -7,6 +7,7 @@ require('includes/header.php');
 $(document).ready(function() {
 
             $("#cpf").mask("000.000.000-00")
+});
 </script>
 
 <!-- Listar clientes -->
@@ -43,7 +44,6 @@ $(document).ready(function() {
                         $nome = $array['nome'];
                         $cpf = preg_replace("/(\d{3}+)(\d{3}+)(\d{3}+)(\d{2}+)/", "$1.$2.$3-$4", $array['cpf']);
                         $email = $array['email'];
-
                     ?>
                     <tr>
                         <td><?= $nome ?></td>

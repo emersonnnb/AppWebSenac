@@ -6,9 +6,11 @@ include('conexao/conexao.php');
 
 if (isset($_GET['id'])) :
     $id = mysqli_escape_string($conexao, $_GET['id']);
-    $sql = "SELECT * FROM produto WHERE id_produto = '$id'";
+    $sql = "SELECT * FROM produto WHERE id_produto=$id";
     $resultado = mysqli_query($conexao, $sql);
-    $dados = mysqli_fetch_array($resultado);
+    $dados = mysqli_fetch_array($resultado, MYSQLI_ASSOC);
+
+    
 endif;
 ?>
 
@@ -25,15 +27,15 @@ endif;
         <form >
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <input type="text" class="form-control" id="descricao" placeholder="descricão" name="descricao">
+                <input type="text" class="form-control" id="descricao" placeholder ="<?php echo $dados['descricao'];?>" name="descricao" value="">
             </div>
             <div class="form-group">
                 <label for="categoria">Categoria:</label>
-                <input type="text" class="form-control" id="categoria" placeholder="categoria" name="categoria">
+                <input type="text" class="form-control" id="categoria" placeholder="<?php echo $dados['categoria'];?>" name="categoria">
             </div>
             <div class="form-group">
                 <label for="preco">Preço:</label>
-                <input type="text" class="form-control" id="preco" placeholder="preço" name="preco">
+                <input type="text" class="form-control" id="preco" placeholder="<?php echo $dados['preco'];?>" name="preco">
             </div>
             <div class="form-group">
                 <label for="imagem">Imagem:</label>
@@ -42,7 +44,7 @@ endif;
             
             
         </form>
-      
+
     </div>
     </div>
 
