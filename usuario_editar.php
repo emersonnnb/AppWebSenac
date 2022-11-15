@@ -25,19 +25,16 @@ endif;
             <input type="hidden" name="id" value="<?php echo $dados['id_restrito']; ?>">
             <div class="form-group ">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome"
-                    value="<?php echo $dados['nome']; ?>" required>
+                <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" value="<?php echo $dados['nome']; ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" class="form-control" id="email" placeholder="E-mail" name="email"
-                    value="<?php echo $dados['email']; ?>" required>
+                <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" value="<?php echo $dados['email']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="text" class="form-control" id="telefone" placeholder="telefone " name="telefone"
-                    value="<?php echo $dados['telefone']; ?>" required>
+                <input type="text" class="form-control" id="telefone" placeholder="telefone " name="telefone" value="<?php echo $dados['telefone']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="telefone">Celular:</label>
@@ -45,13 +42,11 @@ endif;
             </div>
             <div class="form-group">
                 <label for="nome">Login:</label>
-                <input type="text" class="form-control" id="login" placeholder="login" name="login" disabled
-                    value="<?php echo $dados['login']; ?>" required>
+                <input type="text" class="form-control" id="login" placeholder="login" name="login" disabled value="<?php echo $dados['login']; ?>" required>
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha"
-                    value="<?php echo $dados['senha']; ?>">
+                <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" value="<?php echo $dados['senha']; ?>">
             </div>
 
             <input type="submit" name="editar" class="btn btn-success" value="Atualizar">

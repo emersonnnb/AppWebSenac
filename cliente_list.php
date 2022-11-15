@@ -4,10 +4,10 @@ $page = 'listar_cliente';
 require('includes/header.php');
 ?>
 <script type="text/javascript">
-$(document).ready(function() {
+    $(document).ready(function() {
 
-            $("#cpf").mask("000.000.000-00")
-});
+        $("#cpf").mask("000.000.000-00")
+    });
 </script>
 
 <!-- Listar clientes -->
@@ -16,8 +16,7 @@ $(document).ready(function() {
         <div class="d-flex">
             <div class="mr-auto p-2">
                 <h2 class="display-4 titulo">Listar Clientes
-                    <a href="./home.php" class="btn btn-info btn-lg" style="background-color: black; border:none"
-                        role="button" aria-disabled="true">Voltar</a>
+                    <a href="./home.php" class="btn btn-info btn-lg" style="background-color: black; border:none" role="button" aria-disabled="true">Voltar</a>
                 </h2>
                 <hr>
             </div>
@@ -45,34 +44,28 @@ $(document).ready(function() {
                         $cpf = preg_replace("/(\d{3}+)(\d{3}+)(\d{3}+)(\d{2}+)/", "$1.$2.$3-$4", $array['cpf']);
                         $email = $array['email'];
                     ?>
-                    <tr>
-                        <td><?= $nome ?></td>
-                        <td><?= $cpf ?></td>
-                        <td class="d-none d-lg-table-cell"><?= $email ?></td>
-                        <td class="text-center">
-                            <span class="d-none d-md-block">
-                                <a href="cliente_visualizar.php?id=<?= $id_cliente ?>"
-                                    class="btn btn-outline-primary btn-sm">Visualizar</a>
-                                <a href="cliente_editar.php?id=<?= $id_cliente ?>"
-                                    class="btn btn-outline-warning btn-sm">Editar</a>
-                                <a href="cliente_apagar.php?id=<?= $id_cliente ?>" class="btn btn-outline-danger btn-sm"
-                                    data-toggle="modal" data-target=" #apagarRegistro">Apagar</a>
-                            </span>
-                            <div class="dropdown d-block d-md-none">
-                                <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Ações
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
-                                    <a class="dropdown-item"
-                                        href="cliente_visualizar.php?id=<?= $id_cliente ?>">Visualizar</a>
-                                    <a class="dropdown-item" href="cliente_editar.php?id=<?= $id_cliente ?>">Editar</a>
-                                    <a class="dropdown-item" href="cliente_apagar.html" data-toggle="modal"
-                                        data-target="#apagarRegistro">Apagar</a>
+                        <tr>
+                            <td><?= $nome ?></td>
+                            <td><?= $cpf ?></td>
+                            <td class="d-none d-lg-table-cell"><?= $email ?></td>
+                            <td class="text-center">
+                                <span class="d-none d-md-block">
+                                    <a href="cliente_visualizar.php?id=<?= $id_cliente ?>" class="btn btn-outline-primary btn-sm">Visualizar</a>
+                                    <a href="cliente_editar.php?id=<?= $id_cliente ?>" class="btn btn-outline-warning btn-sm">Editar</a>
+                                    <a href="cliente_apagar.php?id=<?= $id_cliente ?>" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target=" #apagarRegistro">Apagar</a>
+                                </span>
+                                <div class="dropdown d-block d-md-none">
+                                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Ações
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                        <a class="dropdown-item" href="cliente_visualizar.php?id=<?= $id_cliente ?>">Visualizar</a>
+                                        <a class="dropdown-item" href="cliente_editar.php?id=<?= $id_cliente ?>">Editar</a>
+                                        <a class="dropdown-item" href="cliente_apagar.html" data-toggle="modal" data-target="#apagarRegistro">Apagar</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
                     <?php
                     }
                     ?>
@@ -82,9 +75,9 @@ $(document).ready(function() {
             <?php
             if (isset($_SESSION['atualizacao_sucesso'])) :
             ?>
-            <div class="alert alert-success col-lg-2">
-                <p>Atualizado com sucesso!!</p>
-            </div>
+                <div class="alert alert-success col-lg-2">
+                    <p>Atualizado com sucesso!!</p>
+                </div>
             <?php
             endif;
             unset($_SESSION['atualizacao_sucesso']);
@@ -95,9 +88,9 @@ $(document).ready(function() {
             <?php
             if (isset($_SESSION['apagado_sucesso'])) :
             ?>
-            <div class="alert alert-success col-lg-2">
-                <p>Apagado com sucesso!!</p>
-            </div>
+                <div class="alert alert-success col-lg-2">
+                    <p>Apagado com sucesso!!</p>
+                </div>
             <?php
             endif;
             unset($_SESSION['apagado_sucesso']);
@@ -105,9 +98,9 @@ $(document).ready(function() {
             <?php
             if (isset($_SESSION['status_cadastro'])) :
             ?>
-            <div class="alert alert-success">
-                <p>Cliente cadastrado com sucesso!!</p>
-            </div>
+                <div class="alert alert-success">
+                    <p>Cliente cadastrado com sucesso!!</p>
+                </div>
             <?php
             endif;
             unset($_SESSION['status_cadastro']);
@@ -117,8 +110,7 @@ $(document).ready(function() {
     </div>
 </div>
 <!-- Modal para confirmar a exclusão de um registro-->
-<div class="modal fade" id="apagarRegistro" tabindex="-1" role="dialog" aria-labelledby="apagarRegistro"
-    aria-hidden="true">
+<div class="modal fade" id="apagarRegistro" tabindex="-1" role="dialog" aria-labelledby="apagarRegistro" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-danger text-white">

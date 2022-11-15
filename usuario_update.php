@@ -10,7 +10,8 @@ if(isset($_POST['editar'])):
     $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
     $telefone = mysqli_real_escape_string($conexao, trim($_POST['telefone']));
     $usuario = mysqli_real_escape_string($conexao, trim($_POST['login']));
-    $senha = mysqli_real_escape_string($conexao, trim(sha1($_POST['senha'])));
+    //$senha = mysqli_real_escape_string($conexao, trim(sha1($_POST['senha'])));
+    $senha = mysqli_real_escape_string($conexao, trim($_POST['senha']));
     
 
 	$sql = "UPDATE acesso_restrito SET nome = '$nome', email = '$email', telefone = '$telefone', senha = '$senha'  WHERE id_restrito = $id";
@@ -23,5 +24,3 @@ if(isset($_POST['editar'])):
 		header('Location: usuario_editar.php');
     endif;
 endif;
-?>
-

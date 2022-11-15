@@ -24,14 +24,12 @@
             <form action="logar.php" method="POST" class="log-form">
                 <div class="form-group">
                     <label class="log-user"> Login do Usuário</label>
-                    <input class="form-control log-user" type="text" name="usuario" placeholder="Digite o seu login"
-                        autocomplete="off" required />
+                    <input class="form-control log-user" type="text" name="usuario" placeholder="Digite o seu login" autocomplete="off" required />
                 </div>
 
                 <div class="form-group">
                     <label class="log-pass">Senha</label>
-                    <input class="form-control log-pass" type="password" name="senha" placeholder="Digite sua senha"
-                        autocomplete="off" required />
+                    <input class="form-control log-pass" type="password" name="senha" placeholder="Digite sua senha" autocomplete="off" required />
                 </div>
                 <button type="submit" class="log-btn-entrar">Entrar</button>
             </form><br>

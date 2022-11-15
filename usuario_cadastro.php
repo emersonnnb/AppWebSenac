@@ -9,6 +9,7 @@ require('includes/header.php');
         $("#cpf").mask("000.000.000-00")
         $("#rg").mask("00.000.000-0")
         $("#celular").mask("(00)00000-0000")
+        $("#telefone").mask("(00)0000-0000")
 
         function limpa_formulário_cep() {
             // Limpa valores do formulário de cep.
@@ -18,58 +19,6 @@ require('includes/header.php');
             $("#uf").val("");
             $("#ibge").val("");
         }
-
-        //Quando o campo cep perde o foco.
-        $("#cep").blur(function() {
-
-            //Nova variável "cep" somente com dígitos.
-            var cep = $(this).val().replace(/\D/g, '');
-
-            //Verifica se campo cep possui valor informado.
-            if (cep != "") {
-
-                //Expressão regular para validar o CEP.
-                var validacep = /^[0-9]{8}$/;
-
-                //Valida o formato do CEP.
-                if (validacep.test(cep)) {
-
-                    //Preenche os campos com "..." enquanto consulta webservice.
-                    $("#rua").val("...");
-                    $("#bairro").val("...");
-                    $("#cidade").val("...");
-                    $("#uf").val("...");
-                    $("#ibge").val("...");
-
-                    //Consulta o webservice viacep.com.br/
-                    $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function(dados) {
-
-                        if (!("erro" in dados)) {
-                            //Atualiza os campos com os valores da consulta.
-                            $("#rua").val(dados.logradouro);
-                            $("#bairro").val(dados.bairro);
-                            $("#cidade").val(dados.localidade);
-                            $("#uf").val(dados.uf);
-                            $("#ibge").val(dados.ibge);
-                        } //end if.
-                        else {
-                            //CEP pesquisado não foi encontrado.
-                            limpa_formulário_cep();
-                            alert("CEP não encontrado.");
-                        }
-                    });
-                } //end if.
-                else {
-                    //cep é inválido.
-                    limpa_formulário_cep();
-                    alert("Formato de CEP inválido.");
-                }
-            } //end if.
-            else {
-                //cep sem valor, limpa formulário.
-                limpa_formulário_cep();
-            }
-        });
     });
 </script>
 
@@ -82,17 +31,18 @@ require('includes/header.php');
                 <hr>
             </div>
         </div>
-            <div class="bg-white text-center">
-              <h3 class="display-4 titulo"><h5>Dados Pessoais</h5></h3>
-              <hr>
-              </div>  
-              <style type="text/css">
-                  hr{
-                    background-color:#ddd;
-                    height: 5px;
-                  
-                  }
-                </style>
+        <div class="bg-white text-center">
+            <h3 class="display-4 titulo">
+                <h5>Dados Pessoais</h5>
+            </h3>
+            <hr>
+        </div>
+        <style type="text/css">
+            hr {
+                background-color: #ddd;
+                height: 1px;
+            }
+        </style>
 
         <form name="usuario" method="POST" action="usuario_cadastrar.php">
             <div class="row">
@@ -124,35 +74,37 @@ require('includes/header.php');
                     <input type="password" class="form-control" id="senha" placeholder="Senha" name="senha" required>
                 </div>
                 <div class="form-group col-md-2">
-                    
+
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="nivel">Tipo</label>
-                    <select name="nivel" class="form-control" id="senha" placeholder="*Selecione*" name="senha"required>
-                        <option value=""selected="selected">*Selecione*</option>
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" class="form-control" id="tipo" placeholder="*Selecione*" name="tipo" required>
+                        <option value="" selected="selected">*Selecione*</option>
                         <option value="1">Usuário</option>
                         <option value="2">Administrador</option>
-                  </select>
+                    </select>
                 </div>
             </div>
-            
 
-            <div class="bg-white text-center">
-              <br><h5>Endereço</h5></h4>
+
+            <!-- <div class="bg-white text-center">
+                <br>
+                <h5>Endereço</h5>
+                </h4>
             </div>
-              <hr>
-              <style type="text/css">
-                h4 {
-                    height:90px;
-                    width:150px;
-                }
-              </style>
+            <hr>
+            <style type="text/css">
+            h4 {
+                height: 90px;
+                width: 150px;
+            }
+            </style>
 
-              <div class="row">
-              <div class="form-group col-3 col-md-3">
-                 <label for="cep">CEP</label>
-                 <input type="text" class="form-control" id="cep" name="cep" value="" placeholder="Insira o CEP">
-             </div>
+            <div class="row">
+                <div class="form-group col-3 col-md-3">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep" name="cep" value="" placeholder="Insira o CEP">
+                </div>
             </div>
 
             <div class="row">
@@ -166,7 +118,8 @@ require('includes/header.php');
                 </div>
                 <div class="form-group col-lg-3">
                     <label for="complemento">Complemento</label>
-                    <input type="text" class="form-control" style="width:225px;height:40px;" id="complemento" name="complemento" placeholder="casa/apartamento/bloco" required>
+                    <input type="text" class="form-control" style="width:225px;height:40px;" id="complemento"
+                        name="complemento" placeholder="casa/apartamento/bloco" required>
                 </div>
             </div>
             <div class="row">
@@ -183,18 +136,16 @@ require('includes/header.php');
                     <input type="text" class="form-control" id="uf" name="uf" readonly>
                 </div>
 
-            </div>
-            <div class="row">
+            </div> -->
+            <div class="row mt-4">
                 <div class="form-group col-md">
                     <input type="submit" name="cadastrar" class="btn btn-primary" value="Cadastrar" />
                     <button type="reset" class="btn btn-danger">Limpar</button>
                 </div>
             </div>
 
-
-
-
-        </form><br>
+        </form>
+        <br>
         <?php
         if (isset($_SESSION['usuario_existe'])) :
         ?>
