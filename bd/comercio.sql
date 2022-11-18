@@ -47,7 +47,7 @@ CREATE TABLE `acesso_restrito` (
 --
 
 INSERT INTO `acesso_restrito` (`id_restrito`, `nome`, `email`, `telefone`, `celular`, `login`, `senha`, `tipo`) VALUES
-(1, 'Administrador', 'admin@admin.com', '(21)0000-0000','999999999', 'admin', '123','2');
+(1, 'Administrador', 'admin@admin.com', '(21)0000-0000','999999999', 'admin', '123','2'),
 (2, 'user', 'user@user.com', '(21)0000-0000','999999999', 'user', '123','1');
 
 -- --------------------------------------------------------
